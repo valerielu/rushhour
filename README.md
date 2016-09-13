@@ -9,11 +9,12 @@ In Rush Hour, a sliding block logic game, you have to battle the gridlock as you
 
 ### Functionality & MVP  
 
-In the vroom vroom game, users will be able to:
+In the Rush Hour game, users will be able to:
 
-- [ ] Start, pause, and reset the game board
+- [ ] Start and reset the game board
+- [ ] Select car to move with mouse click
 - [ ] Move car blocks with the up, down, left and right keys
-- [ ] Advance in levels (2 levels at least, 3 levels as bonus)
+- [ ] Advance in levels (2 total levels at least)
 
 In addition, this project will include:
 

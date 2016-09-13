@@ -9,12 +9,22 @@ class Board {
   setUpCars() {
     this.cars.forEach(car => {
       car.segments.forEach(square => {
-        console.log(car.color);
-        console.log(car.length);
         // $(`li[data-pos=[${square[0]}, ${square[1]}]`).addClass(car.color);
         let $square = $(`li`).eq(square[0] * this.grid.length + square[1]);
         $square.addClass(car.color);
         $square.addClass("car");
+        $square.click(() => {
+          $('.selected').removeClass("selected");
+          // if ($(`.${car.color}`).hasClass("selected")) {
+          //   $(`.${car.color}`).removeClass("selected");
+          // } else {
+          //   $(`.${car.color}`).addClass("selected");
+          // }
+          $(`.${car.color}`).addClass("selected");
+        });
+        // let $carBody = $("<div>");
+        // $carBody.append($square);
+        // $carBody.addClass("car-body");
       });
     });
   }
@@ -23,7 +33,7 @@ class Board {
   isWon() {
 
   }
-
+//check on top of other cars;
 
 
 }

@@ -3,6 +3,21 @@ class View {
     this.$container = $container;
     this.board = board;
     this.render();
+    $(window).on("keydown", (event) => {
+
+      event.preventDefault();
+      if (event.keyCode === 38) {
+        this.board.snake.turn("N");
+      } else if (event.keyCode === 40) {
+        this.board.snake.turn("S");
+      } else if (event.keyCode === 37) {
+        this.board.snake.turn("W");
+      } else if (event.keyCode === 39) {
+        this.board.snake.turn("E");
+      } else if (event.keyCode === 32) {
+        location.reload();
+      }
+    });
   }
 
   setUpBoard() {
@@ -16,6 +31,8 @@ class View {
       $row.data = ("row", i);
       this.$container.append($row);
     }
+
+
   }
 
   render() {

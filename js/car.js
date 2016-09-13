@@ -23,15 +23,18 @@ class Car {
 
   setUpBody() {
     let oppositeOrientation = [this.directionTranslate()[0] * -1, this.directionTranslate()[1] * -1];
-    for (let i = 0; i < this.length; i++) {
-      let bodyPart = [this.startPos[0] + oppositeOrientation[0], this.startPos[1] + oppositeOrientation[1]];
+    for (let i = 0; i < this.length - 1 ; i++) {
+      let bodyPart = [this.segments[i][0] + oppositeOrientation[0], this.segments[i][1] + oppositeOrientation[1]];
       this.segments.push(bodyPart);
     }
+
   }
 
   move(dir) {
     let oldHead, newHead;
-    if (dir === this.directionTranslate()) {
+    if (this.onEdge()) {
+      alert("invalid move!");
+    } else if (dir === this.directionTranslate()) {
       oldHead = this.segments[0];
       newHead = [oldHead[0] + dir[0], oldHead[1] + dir[1]];
       this.segments.unshift(newHead);
@@ -45,7 +48,14 @@ class Car {
       alert("invalid move!");
     }
   }
-//check out of border;
+
+  onEdge() {
+    if (this.directionTranslate() === [1, 0]) {
+      return (this.segments[0][0] === 5 || this.segments[this.length - 1][0] === 0 );
+    } else if (this.directionTranslate() === [0, 1]) {
+      return (this.segments[0][1] === 5 || this.segments[this.length - 1][1] === 0 );
+    }
+  }
 
 }
 

@@ -62,3 +62,12 @@ li {
 .car:hover {
   cursor: pointer;
 }
+
+.car-body {
+  border: 2px solid white;
+}
+
+.selected {
+  opacity: 0.5;
+
+}

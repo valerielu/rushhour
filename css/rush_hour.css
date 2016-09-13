@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+  height: inherit;
+  width: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+#rush-hour {
+  width: 320px;
+  border: 10px solid #ccc;
+  background: #ccc;
+}
+
+ul, ol {
+  list-style-type: none;
+  height: 50px;
+  display: flex;
+}
+
+li {
+  width: 50px;
+  border: 1px solid gray;
+}
+
+.red {
+  background-color: red;
+  border: none;
+}
+.green {
+  background-color: green;
+  border: none;
+}
+.yellow {
+  background-color: yellow;
+  border: none;
+}
+.purple {
+  background-color: purple;
+  border: none;
+}
+.blue {
+  background-color: blue;
+  border: none;
+}
+.orange {
+  background-color: orange;
+  border: none;
+}
+.gray {
+  background-color: gray;
+  border: none;
+}
+
+.car:hover {
+  cursor: pointer;
+}

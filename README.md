@@ -20,14 +20,14 @@ In addition, this project will include:
 
 - [ ] An About modal/component describing the background and rules of the game
 - [ ] A component holding the controls with corresponding keys and what they do
-- [ ] A production Readme
+- [ ] A production ReadMe
 
 ### Wireframes
 
 This app will consist of a single screen with game board, game controls, and nav links to the Github, my LinkedIn,
-and the About modal.  Game controls will include Start, Stop, and Reset buttons.
+and the About modal.  Game controls will include Start and Reset buttons.
 
-![wireframes](https://github.com/valerielu/javascript-project/blob/master/wireframe.png)
+![wireframes](./wireframe.png)
 
 ### Architecture and Technologies
 

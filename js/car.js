@@ -9,14 +9,26 @@ class Car {
   }
 
 
-  directionTranslate() {
+  directionTranslate(dir) {
+    let code;
+    if (dir) {
+      code = dir;
+    } else {
+      code = this.orientation;
+    }
     let pos;
-    switch (this.orientation) {
+    switch (code) {
       case "down":
         pos = [1, 0];
         break;
       case "right":
         pos = [0, 1];
+        break;
+      case "up":
+        pos = [-1, 0];
+        break;
+      case "left":
+        pos = [0, -1];
     }
     return pos;
   }
@@ -30,29 +42,45 @@ class Car {
 
   }
 
-  move(dir) {
+  move(direction) {
+    let dir = this.directionTranslate(direction);
     let oldHead, newHead;
-    if (this.onEdge()) {
-      alert("invalid move!");
-    } else if (dir === this.directionTranslate()) {
+
+    if (direction === this.orientation) {
       oldHead = this.segments[0];
       newHead = [oldHead[0] + dir[0], oldHead[1] + dir[1]];
-      this.segments.unshift(newHead);
-      this.segments.pop();
+      if (newHead[0] > 5 || newHead[1] > 5) {
+        alert("out of bounds!");
+        return;
+      }
+      if (!$('li').eq(newHead[0] * 6 + newHead[1]).hasClass("car")) {
+        this.segments.unshift(newHead);
+        this.segments.pop();
+      } else {
+        alert("on another car!");
+      }
     } else if (dir[0] === this.directionTranslate()[0] * -1 && dir[1] === this.directionTranslate()[1] * -1) {
       oldHead = this.segments[this.length - 1];
       newHead = [oldHead[0] + dir[0], oldHead[1] + dir[1]];
-      this.segments.push(newHead);
-      this.segments.shift();
+      if (newHead[0] < 0 || newHead[1] < 0 ) {
+        alert("out of bounds!");
+        return;
+      }
+      if (!$('li').eq(newHead[0] * 6 + newHead[1]).hasClass("car")) {
+        this.segments.push(newHead);
+        this.segments.shift();
+      } else {
+        alert("on another car!");
+      }
     } else {
       alert("invalid move!");
     }
   }
 
   onEdge() {
-    if (this.directionTranslate() === [1, 0]) {
+    if (this.directionTranslate()[0] === 1) {
       return (this.segments[0][0] === 5 || this.segments[this.length - 1][0] === 0 );
-    } else if (this.directionTranslate() === [0, 1]) {
+    } else if (this.directionTranslate()[1] === 1) {
       return (this.segments[0][1] === 5 || this.segments[this.length - 1][1] === 0 );
     }
   }

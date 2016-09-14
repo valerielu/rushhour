@@ -50,31 +50,34 @@ class Car {
       oldHead = this.segments[0];
       newHead = [oldHead[0] + dir[0], oldHead[1] + dir[1]];
       if (this.color !== "red" && (newHead[0] > 5 || newHead[1] > 5)) {
-        alert("out of bounds!");
+        // alert("out of bounds!");
         return;
       }
       if (!$('li').eq(newHead[0] * 6 + newHead[1]).hasClass("car")) {
         this.segments.unshift(newHead);
         this.segments.pop();
-      } else {
-        alert("on another car!");
       }
+      // else {
+      //   alert("on another car!");
+      // }
     } else if (dir[0] === this.directionTranslate()[0] * -1 && dir[1] === this.directionTranslate()[1] * -1) {
       oldHead = this.segments[this.length - 1];
       newHead = [oldHead[0] + dir[0], oldHead[1] + dir[1]];
       if (newHead[0] < 0 || newHead[1] < 0 ) {
-        alert("out of bounds!");
+        // alert("out of bounds!");
         return;
       }
       if (!$('li').eq(newHead[0] * 6 + newHead[1]).hasClass("car")) {
         this.segments.push(newHead);
         this.segments.shift();
-      } else {
-        alert("on another car!");
       }
-    } else {
-      alert("invalid move! (cars can only move in their orientation)");
+      // else {
+      //   alert("on another car!");
+      // }
     }
+    // else {
+    //   alert("invalid move! (cars can only move in their orientation)");
+    // }
   }
 
   onEdge() {

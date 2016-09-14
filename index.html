@@ -4,24 +4,27 @@
     <meta charset="utf-8">
     <title>Rush Hour</title>
     <link rel="stylesheet" type="text/css" href="./css/rush_hour.css">
+    <link href="https://fonts.googleapis.com/css?family=Skranji:400,700" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="./js/bundle.js"></script>
 
   </head>
 
   <body>
-    <div>
-      <h1 class="title">Rush Hour</h1>
+    <div class="main-container">
       <div class="instructions-container">
-        <h1 class="instructions">Stuck on the 101? Get your red ferrari out to the exit!</h1>
+        <h1 class="title">Rush Hour</h1>
+        <h1 class="instructions">Get the red ferrari to the exit!</h1>
         <h1 class="instructions">Click to select car; ▲ ▼ ◀ ▶ to move</h1>
-        <h1 class="instructions">Note that cars can only move backwards or forwards in their orientation</h1>
+        <h1 class="instructions-note">Note that cars can only move backwards or forwards in their orientation</h1>
       </div>
       <div class="game-container">
         <div class="controls">
           <button class="reset-button">Reset</button>
+          <div class="exit">Exit</div>
         </div>
         <div id="rush-hour"></div>
+        <div class="win-phrase">Great job!</div>
       </div>
       <div class="levels-container">
         <div class="levels">
@@ -29,7 +32,7 @@
           <button class="medium-button">Medium</button>
           <button class="hard-button">Hard</button>
         </div>
-        <h1 class="disclaimer">Inspired by the </h1> <a href="">Rush Hour board game</a>
+        <h1 class="disclaimer">Inspired by the <a href="https://www.amazon.com/ThinkFun-5000-Rush-Hour/dp/B00000DMER" target="_blank">Rush Hour board game</a></h1>
       </div>
 
     </div>

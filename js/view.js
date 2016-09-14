@@ -23,8 +23,7 @@ class View {
           this.board.selectedCar.move("right");
           this.render();
           if (this.board.selectedCar.color === "red" && this.board.isWon()) {
-            $(window).off("keydown");
-            // this.render();
+            this.handleWin();
           }
         }
       }
@@ -42,6 +41,12 @@ class View {
       $row.data("row", i);
       this.$container.append($row);
     }
+  }
+
+  handleWin() {
+    $(window).off("keydown");
+    $(`.${this.board.selectedCar.color}`).removeClass("selected");
+    $(".win-phrase").addClass("show");
   }
 
   render() {

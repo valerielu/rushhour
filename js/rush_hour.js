@@ -13,33 +13,50 @@ $(() => {
   const hardCars = () => ([new Car(2, "red", [2, 1], "right"), new Car(3, "yellow", [3, 2], "down"),
   new Car(2, "green", [3, 4], "right"), new Car(2, "orange", [5, 4], "down"), new Car(3, "blue", [4, 2], "right"), new Car(3, "purple", [5, 5], "down")]);
 
-  let cars = easyCars();
+  let cars = easyCars;
+
+  // let x = 0;
+  //   window.intervalId = setInterval(function(){
+  //       x -= 1;
+  //       $('body').css('background-position', x + 'px 0');
+  //   }, 10);
 
   $('.easy-button').click(() => {
     $container.empty();
+    $(".win-phrase").removeClass("show");
+    $(".current-level").removeClass("current-level");
+    $(".easy-button").addClass("current-level");
     setUpGame(easyCars(), $container);
-    cars = easyCars();
+    cars = easyCars;
   });
 
   $('.medium-button').click(() => {
     $container.empty();
+    $(".win-phrase").removeClass("show");
+    $(".current-level").removeClass("current-level");
+    $(".medium-button").addClass("current-level");
     setUpGame(mediumCars(), $container);
-    cars = mediumCars();
+    cars = mediumCars;
   });
 
   $('.hard-button').click(() => {
     $container.empty();
+    $(".win-phrase").removeClass("show");
+    $(".current-level").removeClass("current-level");
+    $(".hard-button").addClass("current-level");
     setUpGame(hardCars(), $container);
-    cars = hardCars();
+    cars = hardCars;
   });
 
   $('.reset-button').click(() => {
     $container.empty();
-    setUpGame(cars, $container);
+    $(".win-phrase").removeClass("show");
+    setUpGame(cars(), $container);
   });
 
   setUpGame(easyCars(), $container);
-
+  $(".current-level").removeClass("current-level");
+  $(".easy-button").addClass("current-level");
 
 });
 

@@ -11,53 +11,112 @@
   vertical-align: baseline;
   background: transparent;
   box-sizing: border-box;
+  position: relative;
+}
+
+button {
+  outline: none;
+}
+
+body {
+  background-image: url('https://rfclipart.com/image/big/20-5d-cb/traffic-jams-seamless-background-transport-on-road-in-cartoon-style-Download-Royalty-free-Vector-File-EPS-57012.jpg');
+  background-image: url('http://image.shutterstock.com/z/stock-vector-a-cartoon-traffic-jam-scene-cityscape-traffic-52014274.jpg');
+  background-image: url('http://previews.123rf.com/images/suslo/suslo1403/suslo140300024/27362452-Bright-Cartoon-seamless-pattern-with-cars-and-traffic-signs-Stock-Vector.jpg');
+  background-repeat: repeat-x;
+  background-position: center;
+  background-size: cover;
+  font-family: 'Skranji', cursive;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.instructions-container {
+  background: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.title {
+  font-size: 45px;
+}
+
+.instructions {
+  font-size: 25px;
+}
+
+.instructions-note {
+  font-size: 15px;
 }
 
 #rush-hour {
-  width: 320px;
   border: 10px solid #ccc;
-  background: #ccc;
+  margin: 0 auto;
+  border-radius: 10px;
+  background: #000;
+  width: 380px;
 }
 
 ul, ol {
   list-style-type: none;
-  height: 50px;
+  height: 60px;
   display: flex;
+  width: 100%;
 }
 
 li {
-  width: 50px;
-  border: 1px solid gray;
+  width: 60px;
+  border: 1px solid #808080;
   /*background: #ccc;*/
-  /*border-radius: 10px;*/
+  /*border-radius: 5px;*/
+}
+
+.exit {
+  font-size: 25px;
+  color: #EA1821;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 2px 10px;
+  position: absolute;
+  top: 140px;
+  right: -45px;
+  z-index: 1;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
 
 .red {
-  background-color: red;
+  background-color: #EA1821;
+  /*EE1122*/
   border: none;
 }
 .green {
-  background-color: green;
+  background-color: #88CC33;
   border: none;
 }
 .yellow {
-  background-color: yellow;
+  background-color: #FFFF46;
   border: none;
 }
 .purple {
-  background-color: purple;
+  background-color: #8E1E9C;
   border: none;
 }
 .blue {
-  background-color: blue;
+  background-color: #4545FF;
   border: none;
 }
 .orange {
-  background-color: orange;
-  border: none;
-}
-.gray {
-  background-color: gray;
+  background-color: #FFAA00;
   border: none;
 }
 
@@ -69,7 +128,6 @@ li {
   border: 2px solid white;
 }
 
-
 .selected {
   animation: pulse 1.2s infinite;
 }
@@ -79,9 +137,87 @@ li {
     opacity: 1;
   }
   50% {
-    opacity: 0.5;
+    opacity: 0.7;
   }
   100% {
     opacity: 1;
   }
+}
+
+.win-phrase {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  color: #fff;
+  font-size: 60px;
+  top: 150px;
+  left: 60px;
+  animation: fadetext 0.8s ease 0s 1 normal forwards;
+}
+
+.show {
+  display: block;
+}
+
+@keyframes fadetext {
+  0% { opacity: 0; transform: translateY(80px)}
+  /*95% { opacity: 1; transform: translateY(-10px)}*/
+  100%  { opacity: 1; transform: translateY(0px)}
+}
+
+.levels-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.levels {
+  background: #fff;
+  width: 380px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  font-size: 30px;
+  border: 2px solid black;
+}
+
+.current-level {
+  color: green;
+}
+
+.levels > * {
+  display: flex;
+  justify-content: center;
+}
+
+.reset-button {
+  font-size: 30px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 2px 10px;
+  position: absolute;
+  vertical-align: middle;
+  top: 170px;
+  left: -100px;
+  border: 2px solid black;
+}
+
+
+.easy-button:hover, .medium-button:hover, .hard-button:hover, .reset-button:hover {
+  color: #EA1821;
+  cursor: pointer;
+}
+
+.easy-button:active, .medium-button:active, .hard-button:active, .reset-button:active {
+  color: #000;
+}
+
+.disclaimer {
+  font-size: 15px;
+  margin: 5px;
+}
+
+.disclaimer a {
+  color: blue;
 }

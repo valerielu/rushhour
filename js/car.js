@@ -73,7 +73,7 @@ class Car {
         alert("on another car!");
       }
     } else {
-      alert("invalid move!");
+      alert("invalid move! (cars can only move in their orientation)");
     }
   }
 

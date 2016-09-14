@@ -34,7 +34,6 @@ and the About modal.  Game controls will include Start and Reset buttons.
 This project will be implemented with the following technologies:
 
 - Vanilla JavaScript and `jquery` for overall structure and game logic,
-- `Easel.js` with `HTML5 Canvas` for DOM manipulation and rendering,
 - Webpack to bundle and serve up the various scripts.
 
 In addition to the webpack entry file, there will be three scripts involved in this project:

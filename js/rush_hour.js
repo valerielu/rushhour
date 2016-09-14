@@ -34,7 +34,6 @@ $(() => {
   });
 
   $('.reset-button').click(() => {
-    console.log("resetted");
     $container.empty();
     setUpGame(cars, $container);
   });

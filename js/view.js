@@ -2,8 +2,8 @@ class View {
   constructor(board, $container) {
     this.$container = $container;
     this.board = board;
-    this.originalCars = this.board.cars;
     this.render();
+    $(window).off("keydown");
     $(window).on("keydown", (event) => {
       if (this.board.selectedCar) {
         if (event.keyCode === 38) {
@@ -24,7 +24,7 @@ class View {
           this.render();
           if (this.board.selectedCar.color === "red" && this.board.isWon()) {
             $(window).off("keydown");
-            alert("You won!");
+            // this.render();
           }
         }
       }
@@ -48,6 +48,9 @@ class View {
     this.$container.empty();
     this.setUpBoard();
     this.board.setUpCars();
+    if (this.board.selectedCar) {
+      $(`.${this.board.selectedCar.color}`).addClass("selected");
+    }
   }
 }
 

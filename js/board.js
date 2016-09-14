@@ -4,7 +4,7 @@ class Board {
   constructor(cars) {
     this.grid = new Array(6).fill(new Array(6));
     this.cars = cars;
-    this.selectedCar;
+    this.selectedCar = undefined;
   }
 
   setUpCars() {
@@ -23,6 +23,7 @@ class Board {
           // }
           $(`.${car.color}`).addClass("selected");
           this.selectedCar = car;
+          window.selectedCar = car;
         });
         // let $carBody = $("<div>");
         // $carBody.append($square);
@@ -34,11 +35,13 @@ class Board {
 
   isWon() {
     let $redCar = $(".red");
-    // $redCar.each(square, () => {
-    //   if square.data("pos")
-    //   $(window).off("keydown");
-    // })
-
+    let result;
+    $redCar.each((index, square) => {
+      if ($(square).data("pos")[1] === 5) {
+        result = true;
+      }
+    });
+    return result;
   }
 //check on top of other cars;
 

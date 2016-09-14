@@ -28,6 +28,8 @@ ul, ol {
 li {
   width: 50px;
   border: 1px solid gray;
+  /*background: #ccc;*/
+  /*border-radius: 10px;*/
 }
 
 .red {
@@ -67,9 +69,19 @@ li {
   border: 2px solid white;
 }
 
-.selected {
-  opacity: 0.5;
-  
-  /*border: 2px solid white;*/
 
+.selected {
+  animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }

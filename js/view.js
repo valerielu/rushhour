@@ -22,8 +22,9 @@ class View {
           event.preventDefault();
           this.board.selectedCar.move("right");
           this.render();
-          if (this.board.selectedCar.color === "red") {
-            this.board.isWon();
+          if (this.board.selectedCar.color === "red" && this.board.isWon()) {
+            $(window).off("keydown");
+            alert("You won!");
           }
         }
       }
@@ -35,10 +36,10 @@ class View {
       let $row = $("<ul>");
       for (let j = 0; j < this.board.grid.length; j++) {
         let $square = $("<li>");
-        $square.attr = ("data-pos", [i, j]);
+        $square.data("pos", [i, j]);
         $row.append($square);
       }
-      $row.data = ("row", i);
+      $row.data("row", i);
       this.$container.append($row);
     }
   }

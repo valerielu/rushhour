@@ -49,7 +49,7 @@ class Car {
     if (direction === this.orientation) {
       oldHead = this.segments[0];
       newHead = [oldHead[0] + dir[0], oldHead[1] + dir[1]];
-      if (newHead[0] > 5 || newHead[1] > 5) {
+      if (this.color !== "red" && (newHead[0] > 5 || newHead[1] > 5)) {
         alert("out of bounds!");
         return;
       }

@@ -16,29 +16,31 @@ $(() => {
   let cars = easyCars();
 
   $('.easy-button').click(() => {
-    $('.selected').removeClass("selected");
+    $container.empty();
     setUpGame(easyCars(), $container);
     cars = easyCars();
   });
 
   $('.medium-button').click(() => {
-    $('.selected').removeClass("selected");
+    $container.empty();
     setUpGame(mediumCars(), $container);
     cars = mediumCars();
   });
 
   $('.hard-button').click(() => {
-    $('.selected').removeClass("selected");
+    $container.empty();
     setUpGame(hardCars(), $container);
     cars = hardCars();
   });
 
   $('.reset-button').click(() => {
-    $('.selected').removeClass("selected");
+    console.log("resetted");
+    $container.empty();
     setUpGame(cars, $container);
   });
 
   setUpGame(easyCars(), $container);
+
 
 });
 

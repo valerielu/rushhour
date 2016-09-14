@@ -11,15 +11,15 @@ In Rush Hour, a sliding block logic game, you have to battle the gridlock as you
 
 In the Rush Hour game, users will be able to:
 
-- [ ] Start and reset the game board
-- [ ] Select car to move with mouse click
-- [ ] Move car blocks with the up, down, left and right keys
-- [ ] Advance in levels (2 total levels at least)
+- [X] Start and reset the game board
+- [X] Select car to move with mouse click
+- [X] Move car blocks with the up, down, left and right keys
+- [X] Advance in levels (2 total levels at least)
 
 In addition, this project will include:
 
 - [ ] An About modal/component describing the background and rules of the game
-- [ ] A component holding the controls with corresponding keys and what they do
+- [X] A component holding the controls with corresponding keys and what they do
 - [ ] A production ReadMe
 
 ### Wireframes

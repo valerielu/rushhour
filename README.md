@@ -2,10 +2,43 @@
 
 ### Background
 
-Rush Hour is a interactive browser car game based on the popular board game [Rush Hour][link]
+Rush Hour is a interactive browser game based on the popular board game [Rush Hour][link].
 [link]: http://www.thinkfun.com/products/rush-hour/
 
-In Rush Hour, a sliding block puzzle game, you slide the blocking vehicles out of the way for the red car to reach the exit. The points that a player get for each game is calculated based on number of moves taken as well as time took to solution.
+In Rush Hour, player is presented with a puzzle with slidable blocks (cars).
+The goal is move the red car to the exit by sliding the other vehicles out of the way.
+Try to complete the game with as few moves as possible and with as little time as possible.
+
+![screenshot](./screenshot.png)
+
+### Architecture and Technologies
+
+This project is implemented with the following technologies:
+
+- Vanilla JavaScript and `jquery` library for overall structure and game logic.
+- HTML5 for presentation
+- Webpack to bundle and serve up the various scripts.
+
+- There are four are three scripts involved in this project:
+
+`rush_hour.js`: the entry file for Webpack. This script also installs all the listeners for resetting game and changing levels.
+
+`car.js`: handle the different types of cars (including length and color) as well as the "target" red car logic. The car objects `move` logic is handled in this file.
+
+`board.js`: this script handles the logic for creating and updating the the board and car positions. It is fed into the view file to construct the board upon class initiation.
+
+`view.js`: draws out the visuals of the board and the cars; contain the keydown listeners for moving cars.
+
+### Future features
+
+Some anticipated updates of this game are:
+
+- [X] Count and show the number of moves
+- [X] More levels and better graphics
+- [ ] Adding hints in a modal on the side
+- [ ] Add scoreboard scoring mechanisms
+- [ ] Add time count for a user to finish a game
+- [ ] Auto-generate random games
 
 ### Functionality & MVP  
 
@@ -21,28 +54,6 @@ In addition, this project will include:
 - [X] An About modal/component describing the background and rules of the game
 - [X] A component holding the controls with corresponding keys and what they do
 - [X] A production ReadMe
-
-### Wireframes
-
-This app will consist of a single screen with game board, game controls, and nav links to the Github, my LinkedIn,
-and the About modal.  Game controls will include Start and Reset buttons.
-
-![wireframes](./wireframe.png)
-
-### Architecture and Technologies
-
-This project will be implemented with the following technologies:
-
-- Vanilla JavaScript and `jquery` for overall structure and game logic.
-- Webpack to bundle and serve up the various scripts.
-
-In addition to the webpack entry file, there will be three scripts involved in this project:
-
-`car.js`: handle the different types of cars (including length and color) as well as the "target" red car logic. Handles the car moving logic.
-
-`board.js`: this script will handle the logic for creating and updating the the board and car positions. Is fed into the view file.
-
-`view.js`: draws out the visuals of the board and the cars; has the listeners for keydowns.
 
 ### Implementation Timeline
 
@@ -65,14 +76,9 @@ In addition to the webpack entry file, there will be three scripts involved in t
 - Create controls for reset and game level change
 - Have a styled game, nice looking controls and title
 
+### Wireframes
 
-### Bonus features
+This app will consist of a single screen with game board, game controls, and nav links to the Github, my LinkedIn,
+and the About modal.  Game controls will include Start and Reset buttons.
 
-Some anticipated updates are:
-
-- [X] Count and show the number of moves
-- [X] More levels and better graphics
-- [ ] Adding hints in a modal on the side
-- [ ] Add scoreboard scoring mechanisms
-- [ ] Add time count for a user to finish a game
-- [ ] Auto-generate random games
+![wireframes](./wireframe.png)

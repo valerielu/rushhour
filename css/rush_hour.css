@@ -19,11 +19,9 @@ button {
 }
 
 body {
-  background-image: url('https://rfclipart.com/image/big/20-5d-cb/traffic-jams-seamless-background-transport-on-road-in-cartoon-style-Download-Royalty-free-Vector-File-EPS-57012.jpg');
-  background-image: url('http://image.shutterstock.com/z/stock-vector-a-cartoon-traffic-jam-scene-cityscape-traffic-52014274.jpg');
+  /*background-image: url('http://image.shutterstock.com/z/stock-vector-a-cartoon-traffic-jam-scene-cityscape-traffic-52014274.jpg');*/
   background-image: url('http://previews.123rf.com/images/suslo/suslo1403/suslo140300024/27362452-Bright-Cartoon-seamless-pattern-with-cars-and-traffic-signs-Stock-Vector.jpg');
   background-repeat: repeat-x;
-  background-position: center;
   background-size: cover;
   font-family: 'Skranji', cursive;
 }
@@ -92,6 +90,13 @@ li {
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
+}
+
+.move-counter {
+  color: #fff;
+  font-size: 20px;
+  padding: 2px;
+  padding-left: 5px;
 }
 
 .red {
@@ -191,7 +196,7 @@ li {
   justify-content: center;
 }
 
-.reset-button {
+.reset-button, .scroll-button {
   font-size: 30px;
   background: #fff;
   border-radius: 10px;
@@ -203,8 +208,13 @@ li {
   border: 2px solid black;
 }
 
+.scroll-button {
+  top: 230px;
+  left: -145px;
+  font-size: 25px;
+}
 
-.easy-button:hover, .medium-button:hover, .hard-button:hover, .reset-button:hover {
+.easy-button:hover, .medium-button:hover, .hard-button:hover, .reset-button:hover, .scroll-button:hover {
   color: #EA1821;
   cursor: pointer;
 }

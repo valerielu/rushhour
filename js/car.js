@@ -56,10 +56,9 @@ class Car {
       if (!$('li').eq(newHead[0] * 6 + newHead[1]).hasClass("car")) {
         this.segments.unshift(newHead);
         this.segments.pop();
+        window.moveCount += 1;
       }
-      // else {
-      //   alert("on another car!");
-      // }
+
     } else if (dir[0] === this.directionTranslate()[0] * -1 && dir[1] === this.directionTranslate()[1] * -1) {
       oldHead = this.segments[this.length - 1];
       newHead = [oldHead[0] + dir[0], oldHead[1] + dir[1]];
@@ -70,14 +69,11 @@ class Car {
       if (!$('li').eq(newHead[0] * 6 + newHead[1]).hasClass("car")) {
         this.segments.push(newHead);
         this.segments.shift();
+        window.moveCount += 1;
       }
-      // else {
-      //   alert("on another car!");
-      // }
+
     }
-    // else {
-    //   alert("invalid move! (cars can only move in their orientation)");
-    // }
+
   }
 
   onEdge() {

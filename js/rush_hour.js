@@ -15,11 +15,11 @@ $(() => {
 
   let cars = easyCars;
 
-  // let x = 0;
-  //   window.intervalId = setInterval(function(){
-  //       x -= 1;
-  //       $('body').css('background-position', x + 'px 0');
-  //   }, 10);
+  let x = 0;
+    window.intervalId = setInterval(function(){
+        x += 1;
+        $('body').css('background-position', x + 'px 0');
+    }, 10);
 
   $('.easy-button').click(() => {
     $container.empty();
@@ -52,6 +52,10 @@ $(() => {
     $container.empty();
     $(".win-phrase").removeClass("show");
     setUpGame(cars(), $container);
+  });
+
+  $('.scroll-button').click(() => {
+    clearInterval(window.intervalId);
   });
 
   setUpGame(easyCars(), $container);

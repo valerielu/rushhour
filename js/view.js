@@ -2,6 +2,7 @@ class View {
   constructor(board, $container) {
     this.$container = $container;
     this.board = board;
+    window.moveCount = 0;
     this.render();
     $(window).off("keydown");
     $(window).on("keydown", (event) => {
@@ -41,6 +42,9 @@ class View {
       $row.data("row", i);
       this.$container.append($row);
     }
+    let $moveCounter = $(`<div>Moves: ${window.moveCount}</div>`);
+    $moveCounter.addClass("move-counter");
+    this.$container.append($moveCounter);
   }
 
   handleWin() {

@@ -55,6 +55,15 @@ body {
   font-size: 15px;
 }
 
+.icon-links a {
+  font-size: 30px;
+  margin: 5px;
+}
+
+.icon-links a:hover {
+  color: #4885ed;
+}
+
 #rush-hour {
   border: 10px solid #ccc;
   margin: 0 auto;

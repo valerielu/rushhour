@@ -5,7 +5,7 @@
 Rush Hour is a interactive browser car game based on the popular board game [Rush Hour][link]
 [link]: http://www.thinkfun.com/products/rush-hour/
 
-In Rush Hour, a sliding block logic game, you have to battle the gridlock as you slide the blocking vehicles out of the way for the red car to exit. The points that a player get for each game is calculated based on completness as well as time took to solution.
+In Rush Hour, a sliding block puzzle game, you slide the blocking vehicles out of the way for the red car to reach the exit. The points that a player get for each game is calculated based on number of moves taken as well as time took to solution.
 
 ### Functionality & MVP  
 
@@ -18,9 +18,9 @@ In the Rush Hour game, users will be able to:
 
 In addition, this project will include:
 
-- [ ] An About modal/component describing the background and rules of the game
+- [X] An About modal/component describing the background and rules of the game
 - [X] A component holding the controls with corresponding keys and what they do
-- [ ] A production ReadMe
+- [X] A production ReadMe
 
 ### Wireframes
 
@@ -70,6 +70,9 @@ In addition to the webpack entry file, there will be three scripts involved in t
 
 Some anticipated updates are:
 
+- [X] Count and show the number of moves
+- [X] More levels and better graphics
 - [ ] Adding hints in a modal on the side
-- [ ] Add scoreboard and scoring mechanisms to take into account the time it took a user to finish a game
-- [ ] More levels and better graphics
+- [ ] Add scoreboard scoring mechanisms
+- [ ] Add time count for a user to finish a game
+- [ ] Auto-generate random games

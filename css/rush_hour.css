@@ -184,7 +184,7 @@ li {
   justify-content: space-between;
   border-radius: 10px;
   font-size: 30px;
-  border: 2px solid black;
+  border: 3px solid black;
 }
 
 .current-level {
@@ -205,7 +205,7 @@ li {
   vertical-align: middle;
   top: 170px;
   left: -100px;
-  border: 2px solid black;
+  border: 3px solid black;
 }
 
 .scroll-button {

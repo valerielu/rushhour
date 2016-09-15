@@ -19,15 +19,15 @@ This project is implemented with the following technologies:
 - HTML5 for presentation
 - Webpack to bundle and serve up the various scripts.
 
-- There are four are three scripts involved in this project:
+There are four main scripts involved in this project:
 
-`rush_hour.js`: the entry file for Webpack. This script also installs all the listeners for resetting game and changing levels.
+- `rush_hour.js`: the entry file for Webpack. This script also installs all the listeners for resetting game and changing levels.
 
-`car.js`: handle the different types of cars (including length and color) as well as the "target" red car logic. The car objects `move` logic is handled in this file.
+- `car.js`: handle the different types of cars (including length and color) as well as the "target" red car logic. The car objects `move` logic is handled in this file.
 
-`board.js`: this script handles the logic for creating and updating the the board and car positions. It is fed into the view file to construct the board upon class initiation.
+- `board.js`: this script handles the logic for creating and updating the the board and car positions. It is fed into the view file to construct the board upon class initiation.
 
-`view.js`: draws out the visuals of the board and the cars; contain the keydown listeners for moving cars.
+- `view.js`: draws out the visuals of the board and the cars; contain the keydown listeners for moving cars.
 
 ### Future features
 

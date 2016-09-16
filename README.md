@@ -2,7 +2,7 @@
 
 ### Background
 
-[Live Link][live-link]
+[Play here!][live-link]
 
 Rush Hour is a interactive browser game based on the popular board game [Rush Hour][link].
 [link]: http://www.thinkfun.com/products/rush-hour/

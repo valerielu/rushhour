@@ -2,8 +2,11 @@
 
 ### Background
 
+[Live Link][live-link]
+
 Rush Hour is a interactive browser game based on the popular board game [Rush Hour][link].
 [link]: http://www.thinkfun.com/products/rush-hour/
+[live-link]: https://valerielu.github.io/rushhour/
 
 In Rush Hour, player is presented with a puzzle with slidable blocks (cars).
 The goal is move the red car to the exit by sliding the other vehicles out of the way.
